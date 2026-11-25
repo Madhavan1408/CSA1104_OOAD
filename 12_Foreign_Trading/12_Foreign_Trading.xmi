@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_95ba7a843783" name="Foreign Trading System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_bd61446c" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_0f653baed9" name="Supplier" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_25cf4dcf85" name="Customer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_f493fa50c9" name="Trading Manager" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_2dd25d0fc0" name="Central System" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_9d741201aa" name="Maintain Trade Agreement" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_465a9db389" name="Browse Products" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_2d9b391d94" name="Place Trade Order" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_cc3fe996fb" name="Verify Order" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_509e5974a8" name="Track Shipment" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_6132587b" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_3761d89592" name="Country">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_db21f00d9a" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_b193d5b15e" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_02587a01e8" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_97cc5d3524" name="Supplier">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d6a177f4fe" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_f7455ad6d5" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_35349a3d13" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_5df345263f" name="Customer">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4ddc9f12ae" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_b2ac84a8d6" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_8188ed3105" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_17929edf23" name="Product">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_62e118de2a" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d52cce90c2" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1d66784024" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_f7f1d79aa3" name="TradeOrder">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_379b6bc13c" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3a8d58c6ba" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_510f394433" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_fc6530d0a8" name="Shipment">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c1d0711d9e" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1a52194239" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_365bf078cc" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_e34a0858d9" name="Payment">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_bd9616c27b" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5de0203d22" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_640237b768" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_0b903066b5" name="offers" memberEnd="c_97cc5d3524 c_17929edf23" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_4361fbc0ba" name="places" memberEnd="c_5df345263f c_f7f1d79aa3" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_e119fcad4e" name="includes" memberEnd="c_f7f1d79aa3 c_17929edf23" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_6986fb4c99" name="generates" memberEnd="c_f7f1d79aa3 c_e34a0858d9" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_0d6909aea0" name="ships via" memberEnd="c_f7f1d79aa3 c_fc6530d0a8" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

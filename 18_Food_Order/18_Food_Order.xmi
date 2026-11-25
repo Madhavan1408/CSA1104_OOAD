@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_3e450ebcbecb" name="Food Order System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_f6ca8977" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_e0a9a2e0c6" name="Customer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_542a49c88c" name="Dealer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_ad5c0d19ae" name="Central Food System" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_7d4b0dec4a" name="Delivery Agent" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_2c8cff1ab3" name="Browse Menu" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_69846aad87" name="Place Order" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_c16679c149" name="Verify Order" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_474e93f1b0" name="Process Payment" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_336731c30e" name="Deliver Order" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_fa733c8b" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_21fc5ace8c" name="Customer">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c81790f38e" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d9bfed212b" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1bbbdedef1" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_db756691af" name="MenuItem">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_55f58e2279" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1df4a4ea1b" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1e614c3cfc" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_f3dee26e71" name="Order">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a84caa7bb5" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3f973316f2" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_949b1ac6f2" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_85b80e8de0" name="OrderItem">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6db8f581eb" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7995e9d247" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_617cf53c2f" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_cecbeb0296" name="Payment">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a6b3201a68" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_021794cccc" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_85219362c9" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_5e7e88fbe0" name="Delivery">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_f1b442a253" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c92157e612" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d3cbe10248" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_d6a32da991" name="places" memberEnd="c_21fc5ace8c c_f3dee26e71" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_3bb676c5ca" name="contains" memberEnd="c_f3dee26e71 c_85b80e8de0" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_f5e9c135c3" name="refers to" memberEnd="c_85b80e8de0 c_db756691af" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_85f18ccf83" name="has" memberEnd="c_f3dee26e71 c_cecbeb0296" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_993f9509eb" name="fulfilled by" memberEnd="c_f3dee26e71 c_5e7e88fbe0" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

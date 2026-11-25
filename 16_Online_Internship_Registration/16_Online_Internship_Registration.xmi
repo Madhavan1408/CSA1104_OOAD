@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_039ff61e3b18" name="Online Internship Registration System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_b146f8c2" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_05dc98c4c6" name="Candidate" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_49baffa9bc" name="Administrator" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_d59d8a87e8" name="Verifier" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_90b65d5cbb" name="Company HR" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_25e0c7da56" name="Submit Application" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_7c30025e81" name="Verify Candidate" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_28fd95b763" name="Approve Application" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_13a6991f78" name="Issue Internship Letter" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_1708f8c7dd" name="Track Status" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_6cca3547" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_f82649ad7c" name="Candidate">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a5b28b9a01" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1b786427e7" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5f18fd2e85" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_2ae19934bc" name="Application">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4407c856b5" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c40a21ecb5" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4b92d7b9a6" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_92cd008da3" name="Verification">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_b0161da4ad" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a35763dfbf" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_641b2ea34e" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_d901c4ebdf" name="Administrator">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_9f90fcf972" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_bac938861a" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_2b7d9efd50" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_58cc2d90a3" name="InternshipLetter">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a24f0c292f" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_b15e71d082" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7855dedcdf" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_1dc931d510" name="Company">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3961b82867" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5d64116bd5" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_e6cf7a2771" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_44985ce06e" name="submits" memberEnd="c_f82649ad7c c_2ae19934bc" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_6dd0d3da60" name="forwards" memberEnd="c_d901c4ebdf c_2ae19934bc" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_98a0ee3e5e" name="may result in" memberEnd="c_2ae19934bc c_58cc2d90a3" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_6a5d136ad7" name="issues" memberEnd="c_1dc931d510 c_58cc2d90a3" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

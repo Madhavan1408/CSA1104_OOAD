@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_3c5d4693edb2" name="Vehicle Registration Number Registering System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_a104f7be" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_4c4f6631c9" name="Vehicle Owner" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_e281d9740b" name="Registration Officer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_e320771770" name="Payment Gateway" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_2e69882204" name="Verifier" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_f423be1da5" name="Submit Documents" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_d0f4afe1ca" name="Verify Vehicle" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_ec4b662b23" name="Pay Fee" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_05b88b7238" name="Approve Registration" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_98d5a6ade5" name="Issue Registration Certificate" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_200397eb" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_01c2bc5773" name="Owner">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6d4a081764" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_610dcea1b9" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a0d2e1f735" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_9fe85ef219" name="Vehicle">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_093718008b" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_aed3cb1864" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_8d32eb2878" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_8fff4006ad" name="Document">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6ea9a02946" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_96f530c3a6" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4f7a869871" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_9e87144dd6" name="FeePayment">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a8a7c44683" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_25b584fe17" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a7b40fc700" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_fb0e7c9904" name="Verification">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7bcc3e9b5c" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_95d6063648" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_2f046ae59f" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_05b200e9be" name="RegistrationCertificate">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_cc3da45a5c" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7951575864" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_f21138467e" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_a414fda6cd" name="owns" memberEnd="c_01c2bc5773 c_9fe85ef219" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_7782432c62" name="submits" memberEnd="c_01c2bc5773 c_8fff4006ad" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_9addbe2cbc" name="undergoes" memberEnd="c_9fe85ef219 c_fb0e7c9904" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_049043ac54" name="makes" memberEnd="c_01c2bc5773 c_9e87144dd6" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_fd0de1cdb5" name="receives" memberEnd="c_9fe85ef219 c_05b200e9be" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

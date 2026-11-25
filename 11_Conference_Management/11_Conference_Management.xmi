@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_11f3869a522e" name="Conference Management System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_f90a6fde" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_2560e76f27" name="Organizer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_89cc82752f" name="Participant" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_216df15cea" name="Reviewer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_b582a09baf" name="Central System" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_c3e4a97e93" name="Manage Conference" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_d0719e0e72" name="Submit Paper" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_a5b0a4c928" name="Review Paper" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_c3d1ea9141" name="Schedule Session" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_a74d504a58" name="Register Participant" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_95ac77b6" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_4e03554ed5" name="Conference">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_69987040cd" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_b2d2aa591d" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d8d5085541" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_085ecb3d08" name="Participant">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_11368569f4" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_2e1a6c0c72" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_8ac66a510f" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_d8ab7bfb90" name="Paper">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_ad680bd88d" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_aeea240482" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_98e50c20a9" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_15a65ba38a" name="Review">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_41b9b9a57e" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_946f1aa5c0" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_083cc98c8e" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_ab80b5b1b4" name="Session">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4348031ce8" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_945a851172" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4494141ddb" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_c903d63cf8" name="Registration">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5813304ffb" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a9725537b5" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_0d92f3171b" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_e6e9ed8598" name="submits" memberEnd="c_085ecb3d08 c_d8ab7bfb90" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_3379b51985" name="contains" memberEnd="c_4e03554ed5 c_ab80b5b1b4" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_934e149302" name="has" memberEnd="c_085ecb3d08 c_c903d63cf8" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

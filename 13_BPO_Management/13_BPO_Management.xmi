@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_0ffbd581966a" name="BPO Management System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_f9446448" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_32ee4acac1" name="Customer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_b4a708754c" name="BPO Agent" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_ffb9e31cff" name="Supervisor" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_1d302170e6" name="Central System" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_a5ccd8ffd9" name="Register Customer" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_dc945a8961" name="Create Case" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_fcbb9c307a" name="Record Interaction" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_4d2caacf4c" name="Assign Agent" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_da3591618f" name="Resolve Case" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_b68aacc9" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_72d16cb98f" name="Customer">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_e32306e2c1" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a3f706841e" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_9bc9bfc242" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_117ad9eff8" name="Case">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_99e65cf5f7" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_96660fdd65" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_f61fa3cd52" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_752fa3825e" name="Agent">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_f0d2628236" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_73b4aafefa" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a0b639533e" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_745da79f3e" name="Interaction">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6b275d7b41" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3102964626" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_55dd95a84b" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_f647c4baf1" name="Supervisor">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_134edcda6e" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7cacd0acd3" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3b951ae2de" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_db463d6e8a" name="ServiceRequest">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6b0163290f" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_314f3f51a6" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_0e19ccf4c6" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_5243b7b470" name="raises" memberEnd="c_72d16cb98f c_db463d6e8a" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_ec2ba20261" name="creates" memberEnd="c_db463d6e8a c_117ad9eff8" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_7e8079890d" name="assigned to" memberEnd="c_117ad9eff8 c_752fa3825e" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_9b24ddb0c0" name="has" memberEnd="c_117ad9eff8 c_745da79f3e" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_354d850bcf" name="oversees" memberEnd="c_f647c4baf1 c_752fa3825e" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

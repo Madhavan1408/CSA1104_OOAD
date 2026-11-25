@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_5eb967ff46db" name="Library Management System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_261df494" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_d678d8ab97" name="Reader" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_953a0e89b9" name="Library Administrator" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_53e42f3b0f" name="Central Computer" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_4da1522161" name="Librarian" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_aa395b693d" name="Register Reader" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_d12119a24a" name="Verify Reader" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_d5e048b45f" name="Approve Reader" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_650c609fc6" name="Search Books" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_3f693063d6" name="Issue Book" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_96fe654bb6" name="Return Book" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_7b3189a7" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_a946edcebd" name="Reader">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3821bdab3c" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3276699e5f" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5cc25be32f" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_b036f3abb9" name="ReaderRecord">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6eec644cbf" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_bac73b2dcc" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_ba66003680" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_aebf854aaf" name="Book">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5fc6480b65" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_8e80fcf473" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7cd5086f4b" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_09d112f9b6" name="Loan">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_06e9309fbc" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_812bd424ea" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c355c4a764" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_4fee0f41bd" name="Administrator">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_af9de8f009" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_039493e5e9" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d13993ad7e" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_a089bc9aa3" name="Approval">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_3e2202c091" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_97f2d49946" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_5bf23caa40" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_70b7fbe080" name="has" memberEnd="c_a946edcebd c_b036f3abb9" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_43d7799891" name="receives" memberEnd="c_b036f3abb9 c_a089bc9aa3" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_c51f258f2d" name="borrows" memberEnd="c_a946edcebd c_09d112f9b6" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_0b9919efb9" name="refers to" memberEnd="c_09d112f9b6 c_aebf854aaf" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_ca9be8773d98" name="Home Appliance Control System (HACS)">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_80e1e99b" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_9696d78d9a" name="Homeowner" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_bfdd51ccb5" name="Mobile App" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_9e2a841581" name="Home Gateway" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_4420ca44f9" name="Smart Appliance" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_6ce7c9c88e" name="Authenticate User" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_b8aafc118c" name="View Appliance Status" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_d6a10224cb" name="Send Control Command" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_f618e7ef43" name="Execute Command" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_84eeb23e73" name="Schedule Automation" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_f76723c9" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_a9dafbf462" name="Homeowner">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_50a1a6613e" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_43ea6cc375" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_ed9c9785e7" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_01046020a3" name="MobileApp">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_9df2f611f8" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_6fca4b5820" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c8ab1c6ade" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_5c7e58aeb7" name="HomeGateway">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_dbbc27bf3c" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_4f986c0737" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7bdd2cb1c3" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_0426c37abd" name="Appliance">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_77ac9eaf5d" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_83b2769d02" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_e8452e801e" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_1c63d5a999" name="Command">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_00c1868e02" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_e086ca7058" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_fdebd0b97d" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_3d54c17a48" name="AutomationRule">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_9ce8950e44" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1d7e7a2092" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d054991c10" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_9b34af9fd1" name="controls" memberEnd="c_a9dafbf462 c_0426c37abd" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_fc3f39b399" name="sends" memberEnd="c_01046020a3 c_1c63d5a999" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_79440efe42" name="routes through" memberEnd="c_1c63d5a999 c_5c7e58aeb7" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_3ae2fbfabe" name="controls" memberEnd="c_5c7e58aeb7 c_0426c37abd" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_3603a6afff" name="triggers" memberEnd="c_3d54c17a48 c_1c63d5a999" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>

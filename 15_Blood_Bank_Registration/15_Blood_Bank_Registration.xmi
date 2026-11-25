@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmi:version="2.5.1">
+  <uml:Model xmi:id="model_5286d2b7a967" name="Blood Bank Registration System">
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="pkg_297dfa16" name="Use Cases">
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_daf4f8bf3f" name="Donor" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_35639716a3" name="Hospital" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_1175583bed" name="Blood Bank Staff" />
+      <uml:packagedElement xmi:type="uml:Actor" xmi:id="a_e76bba084b" name="Central System" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_b5cf357237" name="Register Donor" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_fad0b4ce8a" name="Check Availability" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_06438b513d" name="Book Appointment" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_1a68fbf2e4" name="Update Blood Stock" />
+      <uml:packagedElement xmi:type="uml:UseCase" xmi:id="uc_087f62ec7b" name="Search Blood Type" />
+    </uml:packagedElement>
+    <uml:packagedElement xmi:type="uml:Package" xmi:id="cp_361686f9" name="Domain Classes">
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_ad2e49e22e" name="Donor">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_96f579dac6" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_0d06d41e44" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7e8ac4b588" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_b0dbc95c55" name="Hospital">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_a3d6e31712" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_fd53cd4307" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_92e1de9f54" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_9c468c0400" name="Appointment">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_669bda8707" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_dcbae84d68" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_02ea1f0fb3" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_3b24594ed1" name="BloodUnit">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_425da60bf4" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_136ef606d2" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_7e699d1f2c" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_ee2e3747f0" name="BloodStock">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_c17ecd9fe3" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_1954b8b874" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_530e0dd9c2" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Class" xmi:id="c_037d34e5ca" name="DonorRecord">
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_93ec9b5a9e" name="id" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_8b50570085" name="name" visibility="private" />
+        <uml:ownedAttribute xmi:type="uml:Property" xmi:id="p_d3145d20bb" name="status" visibility="private" />
+      </uml:packagedElement>
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_ad3e7ea668" name="has" memberEnd="c_ad2e49e22e c_037d34e5ca" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_ce3b6f75ce" name="supports" memberEnd="c_037d34e5ca c_9c468c0400" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_5a67335e7b" name="tracks" memberEnd="c_ee2e3747f0 c_3b24594ed1" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_fb89861f07" name="requests" memberEnd="c_b0dbc95c55 c_3b24594ed1" />
+      <uml:packagedElement xmi:type="uml:Association" xmi:id="as_cd749c8323" name="is for" memberEnd="c_9c468c0400 c_ad2e49e22e" />
+    </uml:packagedElement>
+  </uml:Model>
+</xmi:XMI>
